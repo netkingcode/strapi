@@ -137,6 +137,21 @@ const ApplicationInfosPage = () => {
                   <GridItem col={6} s={12}>
                     <Typography variant="sigma" textColor="neutral600" as="dt">
                       {formatMessage({
+                        id: 'Application.Settings.application.app-version',
+                        defaultMessage: 'Application version',
+                      })}
+                    </Typography>
+                    <Typography as="dd">
+                      {formatMessage({
+                        id: 'Application.Settings.application.app-version-value',
+                        defaultMessage: 'v1.0.0',
+                      })}
+                    </Typography>
+                  </GridItem>
+                  {canRead && (
+                  <GridItem col={6} s={12}>
+                    <Typography variant="sigma" textColor="neutral600" as="dt">
+                      {formatMessage({
                         id: 'Settings.application.strapiVersion',
                         defaultMessage: 'strapi version',
                       })}
@@ -157,6 +172,8 @@ const ApplicationInfosPage = () => {
                       )}
                     </Flex>
                   </GridItem>
+                  )}
+                  {canRead && (
                   <GridItem col={6} s={12}>
                     <Typography variant="sigma" textColor="neutral600" as="dt">
                       {formatMessage({
@@ -187,7 +204,8 @@ const ApplicationInfosPage = () => {
                       </Link>
                     </Flex>
                   </GridItem>
-
+                  )}
+                  {canRead && (
                   <GridItem col={6} s={12}>
                     <Typography variant="sigma" textColor="neutral600" as="dt">
                       {formatMessage({
@@ -197,7 +215,10 @@ const ApplicationInfosPage = () => {
                     </Typography>
                     <Typography as="dd">{appInfos.nodeVersion}</Typography>
                   </GridItem>
+                  )}
+                  {canRead && (
                   <AdminSeatInfo />
+                  )}
                 </Grid>
               </Flex>
               {canRead && data && (
