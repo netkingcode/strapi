@@ -116,6 +116,9 @@ const LeftMenu = () => {
             section.title.values
           );
 
+          if (section.links.length == 0) {
+            return false;
+          }
           return (
             <SubNavSection
               key={section.id}
