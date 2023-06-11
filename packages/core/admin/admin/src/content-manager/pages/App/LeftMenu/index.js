@@ -130,7 +130,11 @@ const LeftMenu = () => {
 
                 return (
                   <SubNavLink as={NavLink} key={link.uid} to={`${link.to}${search}`}>
-                    {link.title}
+                    {/* {link.title} */}
+                    {formatMessage({
+                      id: 'Content-Type.DisplayName.' + link.title,
+                      defaultMessage: link.title,
+                    })}
                   </SubNavLink>
                 );
               })}
