@@ -132,7 +132,8 @@ const LeftMenu = () => {
                   <SubNavLink as={NavLink} key={link.uid} to={`${link.to}${search}`}>
                     {/* {link.title} */}
                     {formatMessage({
-                      id: 'Content-Type.DisplayName.' + link.title,
+                      // id: 'Content-Type.DisplayName.' + link.title,
+                      id: link.title,
                       defaultMessage: link.title,
                     })}
                   </SubNavLink>
