@@ -26,8 +26,8 @@ export function DragLayer({ renderItem }) {
       mouseOffset: monitor.getClientOffset(),
     })
   );
-
-  if (!isDragging) {
+  
+  if (!isDragging || itemType && itemType.startsWith('dbg_')) {
     return null;
   }
 
